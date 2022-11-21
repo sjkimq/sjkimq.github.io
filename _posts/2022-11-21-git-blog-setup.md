@@ -117,10 +117,21 @@ tag: blog
     ---
     ```
 
+- _data 하위에 navigation.yml  파일 수정
+
+  - main: 하위에 아래 "Tag" 관련 내용 입력
+
+    ```yml
+    # main links
+    main:
+      - title: "Tag"
+        url: /tags/
+    ```
+
 - _posts 하위에 md 파일 수정
 
   - tag 지정을 원하는 파일 수정함
-  
+
     ```md
     ---
     layout: post
@@ -129,7 +140,7 @@ tag: blog
     tag: blog
     ---
     ```
-  
+
     
 
 ## branch 병합 방법 (commit log update가 안될때)
