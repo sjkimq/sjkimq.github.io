@@ -59,7 +59,9 @@ title:  "git blog setup"
 - git hub desktop
   - commit name 입력 $\rightarrow$ Commit to gh-pages $\rightarrow$ Push origin
 - github
-  - Repository 에 와서 
+  - Repository 에 와서 commits 을 눌러보면 commit한 로그가 보인다
+  - Repository 에 와서 Pull request 해주면 된다
+  - 
 
 
 
