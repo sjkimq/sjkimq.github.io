@@ -61,6 +61,7 @@ title:  "git blog setup"
 - github
   - Repository 에 와서 commits 을 눌러보면 commit한 로그가 보인다
   - Repository 에 와서 Pull request 해주면 된다
+  - 또는, github desktop에서 Create Pull Request 해준다
   - 
 
 
