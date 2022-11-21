@@ -1,9 +1,6 @@
 ---
-
 layout: post
-
 title:  "git blog setup"
-
 ---
 
 
@@ -49,7 +46,10 @@ title:  "git blog setup"
 
 
 
-
+- jupyter notebook을 blog로 발행 [1]
+  - File $\rightarrow$ Download as $\rightarrow$ Markdown(.md) $\rightarrow$ markdown file로 download가 완료 됨
+  - download 된 markdown 파일명 수정 (년-월-일-제목.md)
+  - git 에 update
 
 
 
