@@ -68,7 +68,7 @@ title:  "git blog setup"
       - "update 내용" 제목 & 본문 입력
       - Create pull request 버튼
     - Merge pull request $\rightarrow$ Confirm merge
-    - 
+      - branch 병합 작업 완료됨
   - 또는, github desktop에서 Create Pull Request 해준다
     - 방법은 위와 유사
 
