@@ -57,7 +57,9 @@ title:  "git blog setup"
 
 - md 파일 수정 $\rightarrow$ 저장
 - git hub desktop
-  - commit name 입력 $\rightarrow$ Commit to gh-pages $\rightarrow$ 
+  - commit name 입력 $\rightarrow$ Commit to gh-pages $\rightarrow$ Push origin
+- github
+  - Repository 에 와서 
 
 
 
