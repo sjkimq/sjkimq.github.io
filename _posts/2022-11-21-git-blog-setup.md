@@ -2,7 +2,7 @@
 layout: post
 title:  "git blog setup"
 categories: git-blog
-tag: blog
+tag: [git, blog]
 ---
 
 ## git hub blog setup (초기 설정)
@@ -101,7 +101,7 @@ tag: blog
 
  
 
-## tag 추가하기
+## tag 추가하기 [8]
 
 - _pages 하위에 tag-archive.md 파일 생성
 
@@ -141,7 +141,26 @@ tag: blog
     ---
     ```
 
+## tag 여러 개 추가하기 [8]
+
+- _posts 하위에 md 파일 수정
+
+  - tag 지정을 원하는 파일 수정함
+
+    - 예) [tag1, tag2]
+
+    ```md
+    ---
+    layout: post
+    title:  "git blog setup"
+    categories: git-blog
+    tag: [git, blog]
+    ---
+    ```
+
     
+
+
 
 ## branch 병합 방법 (commit log update가 안될때)
 
