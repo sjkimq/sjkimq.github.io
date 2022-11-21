@@ -2,6 +2,7 @@
 layout: post
 title:  "git blog setup"
 categories: git-blog
+tag: blog
 ---
 
 ## git hub blog setup (초기 설정)
@@ -42,7 +43,7 @@ categories: git-blog
   - download 된 markdown 파일명 수정 (년-월-일-제목.md)
   - git 에 update
 
-## Category 만들기
+## Category 만들기 [8]
 
 - _config.yml
 
@@ -97,6 +98,37 @@ categories: git-blog
     categories: git-blog
     ---
     ```
+
+ 
+
+## tag 추가하기
+
+- _pages 하위에 tag-archive.md 파일 생성
+
+  - 아래 내용 입력
+
+    ```md
+    ---
+    title: "Tag"
+    layout: tags
+    permalink: /tags/
+    auther_profile: true
+    sidebar_main: true
+    ---
+    ```
+
+- _posts 하위에 md 파일 수정
+
+  - tag 지정을 원하는 파일 수정함
+  
+    ```md
+    ---
+    layout: post
+    title:  "git blog setup"
+    categories: git-blog
+    tag: blog
+    ---
+    ```
   
     
 
@@ -137,7 +169,7 @@ categories: git-blog
 
 [7] EP06. 테마변경, SNS 링크 삽입, Pagination 설정 (https://youtu.be/Wi1W3hpfvZc)
 
-[8] EP07. 카테고리 기능, [#태그](https://www.youtube.com/hashtag/태그) 기능 추가하기 (https://youtu.be/3UOh0rKlxjg)
+[8] EP07. 카테고리 기능, [#태그] 기능 추가하기 (https://youtu.be/3UOh0rKlxjg)
 
 [9] EP08. 글 목차, 404 페이지 에러 구현 (https://youtu.be/OoeGqYu8JFQ)
 
