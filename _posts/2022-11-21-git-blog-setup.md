@@ -1,13 +1,10 @@
 ---
 layout: post
 title:  "git blog setup"
+categories: git-blog
 ---
 
-
-
-# git hub blog 만들기
-
-
+## git hub blog setup (초기 설정)
 
 - git hub login
 - Repositories $\rightarrow$ New $\rightarrow$ Repository name : sjkimq.github.io $\rightarrow$ Public $\rightarrow$ Add a README file $\rightarrow$ Create repository
@@ -28,14 +25,10 @@ title:  "git blog setup"
   - Merge pull request
   - Confirm merge
 
-
-
 - _config.yml 수정 (꼭 해야되는지 모르겠음) [1]
   - url 수정
     - url                      : "https://sjkimq.github.io"
   - git 에 update
-
-
 
 - post 만들기 [1]
   - 로컬에 sjkimq.github.io 하위에 _posts 폴더 생성
@@ -44,14 +37,68 @@ title:  "git blog setup"
   - --- layout: post title:  "Welcome to Jekyll!" --- 를 본문에 복사
   - git 에 update
 
-
-
 - jupyter notebook을 blog로 발행 [1]
   - File $\rightarrow$ Download as $\rightarrow$ Markdown(.md) $\rightarrow$ markdown file로 download가 완료 됨
   - download 된 markdown 파일명 수정 (년-월-일-제목.md)
   - git 에 update
 
+## Category 만들기
 
+- _config.yml
+
+  - 아래 주석 해제
+
+    ```yml
+    jekyll-archives:
+      enabled:
+        - categories
+        - tags
+      layouts:
+        category: archive-taxonomy
+        tag: archive-taxonomy
+      permalinks:
+        category: /categories/:name/
+        tag: /tags/:name/
+    ```
+
+- _pages 하위에 category-archive.md 파일 추가
+
+  - 아래 내용 입력
+
+    ```md
+    ---
+    title: "Category"
+    layout: categories
+    permalink: /categories/
+    auther_profile: true
+    sidebar_main: true
+    ---
+    ```
+
+- _data 하위에 navigation.yml 파일 수정
+
+  - 아래 내용 입력
+
+    ```yml
+    # main links
+    main:
+      - title: "Category"
+        url: /categories/
+    ```
+
+- _posts 하위에 md 파일 수정
+
+  - 카테고리 지정을 원하는 파일 수정함
+  
+    ```md
+    ---
+    layout: post
+    title:  "git blog setup"
+    categories: git-blog
+    ---
+    ```
+  
+    
 
 ## branch 병합 방법 (commit log update가 안될때)
 
@@ -74,7 +121,7 @@ title:  "git blog setup"
 
 
 
-### References
+## References
 
 [1] 깃헙(GitHub) 블로그 10분안에 완성하기 (https://youtu.be/ACzFIAOsfpM)
 
