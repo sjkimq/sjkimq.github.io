@@ -53,7 +53,7 @@ title:  "git blog setup"
 
 
 
-## commit log
+## branch 병합 방법 (commit log update가 안될때)
 
 - md 파일 수정 $\rightarrow$ 저장
 - git hub desktop
@@ -61,8 +61,16 @@ title:  "git blog setup"
 - github
   - Repository 에 와서 commits 을 눌러보면 commit한 로그가 보인다
   - Repository 에 와서 Pull request 해주면 된다
+    - Pull requests $\rightarrow$ New pull request
+      - base : main $\leftarrow$ compare : gh-pages
+    - Create pull request
+    - Open a pull request 항목에서
+      - "update 내용" 제목 & 본문 입력
+      - Create pull request 버튼
+    - Merge pull request $\rightarrow$ Confirm merge
+    - 
   - 또는, github desktop에서 Create Pull Request 해준다
-  - 
+    - 방법은 위와 유사
 
 
 
