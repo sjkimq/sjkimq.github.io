@@ -200,17 +200,17 @@ tag: [latex, blog]
 
 
 ## Reference
-[1] [Github로 블로그 만들기 + LaTeX 적용하기] (https://helloworldpark.github.io/jekyll/update/2016/12/18/Github-and-Latex.html)
-[2] [GitHub에서 수식 입력 하기 (with LaTex)] (https://www.whatwant.com/entry/GitHub-LaTex)
-[3] [Math support in Markdown] (https://github.blog/2022-05-19-math-support-in-markdown/)
-[4] [github blog와 LaTeX] (http://www.ktug.org/xe/index.php?mid=KTUG_open_board&document_srl=248288)
+[1] [Github로 블로그 만들기 + LaTeX 적용하기](https://helloworldpark.github.io/jekyll/update/2016/12/18/Github-and-Latex.html)
+[2] [GitHub에서 수식 입력 하기 (with LaTex)](https://www.whatwant.com/entry/GitHub-LaTex)
+[3] [Math support in Markdown](https://github.blog/2022-05-19-math-support-in-markdown/)
+[4] [github blog와 LaTeX](http://www.ktug.org/xe/index.php?mid=KTUG_open_board&document_srl=248288)
 
-[5] [github blog와 latex] (https://eeeuns.github.io/2020/12/10/githubblog/)
+[5] [github blog와 latex](https://eeeuns.github.io/2020/12/10/githubblog/)
 
-[6] [007. JeKyll 환경 - (3) 환경설정 기본값] (https://namhoon.kim/2017/03/18/jekyll/007/index.html)
+[6] [007. JeKyll 환경 - (3) 환경설정 기본값](https://namhoon.kim/2017/03/18/jekyll/007/index.html)
 
-[7] [Jekyll,Github 블로그에 LaTex, MathJax 적용, 오류해결] (https://khw11044.github.io/blog/blog-etc/2020-12-21-jekyll-Latex/)
+[7] [Jekyll,Github 블로그에 LaTex, MathJax 적용, 오류해결](https://khw11044.github.io/blog/blog-etc/2020-12-21-jekyll-Latex/)
 
-[8] [Jekyll Github 블로그에 MathJax로 수학식 표시하기] (https://mkkim85.github.io/blog-apply-mathjax-to-jekyll-and-github-pages/)
+[8] [Jekyll Github 블로그에 MathJax로 수학식 표시하기](https://mkkim85.github.io/blog-apply-mathjax-to-jekyll-and-github-pages/)
 
-[9] [github.io 수식 오류 해결하기!] (https://an-seunghwan.github.io/github.io/mathjax-error/)
+[9] [github.io 수식 오류 해결하기!](https://an-seunghwan.github.io/github.io/mathjax-error/)
