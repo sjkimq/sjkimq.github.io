@@ -3,6 +3,7 @@ layout: post
 title:  "git blog setup"
 categories: git-blog
 tag: [git, blog]
+use_math: true
 ---
 
 ## git hub blog setup (초기 설정)
