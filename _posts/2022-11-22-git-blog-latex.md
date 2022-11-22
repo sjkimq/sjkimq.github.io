@@ -79,7 +79,7 @@ tag: [latex, blog]
       </div>
   
       {% include scripts.html %}
-      {% include Mathjax.html %}
+      {% include mathjax_support.html %}
     </body>
   </html>
   ```
