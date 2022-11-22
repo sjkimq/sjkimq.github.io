@@ -84,9 +84,9 @@ tag: [latex, blog]
   </html>
   ```
 
-- _includes/scripts.html 파일 수정하기
+- _includes/scripts.html 파일 수정하기 [9]
 
-  - `_includes` 폴더의 `scripts.html` 파일에 아래와 같은 코드를 맨 아래에 그대로 추가
+  - `_includes` 폴더의 `scripts.html` 파일의 맨 아래에 아래 코드를 추가
 
     ```html
     <script type="text/javascript" async
@@ -106,10 +106,30 @@ tag: [latex, blog]
        });
     </script>
     ```
-
-
-- test
-  - $\rightarrow$
+  
+  
+  - change a `script` tag that loads MathJax from the CDN (https://github.com/mathjax/MathJax-src)
+    ```html
+    <script id="MathJax-script" async
+            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+    
+    <script type="text/x-mathjax-config">
+       MathJax.Hub.Config({
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX", "output/HTML-CSS"],
+         tex2jax: {
+           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+           displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+           processEscapes: true
+         },
+         "HTML-CSS": { availableFonts: ["TeX"] }
+       });
+    </script>
+    ```
+  
+    
+  
 
 
 
