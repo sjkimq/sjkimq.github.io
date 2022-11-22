@@ -7,11 +7,11 @@ tag: [latex, blog]
 
 
 
-## git hub blog latex [5]
+## git hub blog latex [9], [5]
 
-- _config.yml 파일의 마크다운 엔진 변경 [9], [5]
+- _config.yml 파일의 markdown engine 변경 [9], [5]
 
-  - 마크다운 엔진을 kramdown로 세팅할 것. kramdown의 math blocks가 $$처리를 알아서 해준다. [6]
+  - markdown engine을 kramdown으로 세팅할 것. kramdown의 math blocks가 $$처리를 알아서 해준다. [6]
 
   - _config.yml 파일 내 아래 내용(default 값)
   
@@ -22,7 +22,6 @@ tag: [latex, blog]
     lsi: false
     excerpt_separator: "\n\n"
     incremental: false
-    
     
     # Markdown Processing
     kramdown:
@@ -35,58 +34,144 @@ tag: [latex, blog]
       smart_quotes: lsquo,rsquo,ldquo,rdquo
       enable_coderay: false
     ```
+  
+- _includes/mathjax_support.html 파일 추가하기
 
-- _includes 폴더 하위에 mathjax_support.html 파일을 만들고 다음 내용을 추가한다.[9]
+  - `_includes` 폴더에 아래와 같은 내용이 적힌 `mathjax_support.html` 파일을 추가한다 [5]
 
-  ```html
-  <script type="text/javascript">
-    window.MathJax = {
-   tex: {
-     packages: ['base', 'ams']
-   },
-   loader: {
-     load: ['ui/menu', '[tex]/ams']
-   },
-   startup: {
-     ready() {
-       MathJax.startup.defaultReady();
-       const Macro = MathJax._.input.tex.Symbol.Macro;
-       const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
-       const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
-       const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
-       MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+    ```html
+    <script type="text/javascript">
+      window.MathJax = {
+     tex: {
+       packages: ['base', 'ams']
+     },
+     loader: {
+       load: ['ui/menu', '[tex]/ams']
+     },
+     startup: {
+       ready() {
+         MathJax.startup.defaultReady();
+         const Macro = MathJax._.input.tex.Symbol.Macro;
+         const MapHandler = MathJax._.input.tex.MapHandler.MapHandler;
+         const Array = MathJax._.input.tex.ams.AmsMethods.default.Array;
+         const env = new Macro('psmallmatrix', Array, [null, '(', ')', 'c', '.333em', '.2em', 'S', 1]);
+         MapHandler.getMap('AMSmath-environment').add('psmallmatrix', env);
+       }
      }
-   }
-    };
-    </script>
-    <script type="text/javascript" id="MathJax-script" async
-   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
-  ```
+      };
+      </script>
+      <script type="text/javascript" id="MathJax-script" async
+     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+      </script>
+    ```
 
-- _layouts 폴더 밑의 default.html 맨밑에 mathjax_support.html을 인클루드한다. 이때 body문 내에서 (위에 지정하는것이아닌) 제일 마지막 줄에 인클루드를 해준다.
+  - `_includes` 폴더에 아래와 같은 내용이 적힌 `mathjax_support.html` 파일을 추가한다 [9]
 
-  ```html
-  <!-- before -->
-  </div>
-  
-      {% include scripts.html %}
-  
-    </body>
-  </html>
-  
-  <!-- after -->
-      </div>
-  
-      {% include scripts.html %}
-      {% include mathjax_support.html %}
-    </body>
-  </html>
-  ```
+    ```html
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "AMS"
+          }
+        },
+        tex2jax: {
+        inlineMath: [ ['$', '$'] ],
+        displayMath: [ ['$$', '$$'] ],
+        processEscapes: true,
+      }
+    });
+    MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
+    	  alert("Math Processing Error: "+message[1]);
+    	});
+    MathJax.Hub.Register.MessageHook("TeX Jax - parse error",function (message) {
+    	  alert("Math Processing Error: "+message[1]);
+    	});
+    </script>
+    <script type="text/javascript" async
+      src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    ```
+
+    
+
+- _layouts/default.html 파일 수정
+
+  - 맨밑에 mathjax_support.html을 인클루드한다. 이때 body문 내에서 (위에 지정하는것이아닌) 제일 마지막 줄에 인클루드를 해준다 [5]
+
+    ```html
+    <!-- before -->
+    </div>
+    
+        {% include scripts.html %}
+    
+      </body>
+    </html>
+    
+    <!-- after -->
+        </div>
+    
+        {% include scripts.html %}
+        {% include mathjax_support.html %}
+      </body>
+    </html>
+    ```
+
+  - _layouts/defaut.html 파일을 확인했을 때, `<head>`와 `</head>` 사이에 아래와 같은 `use_math`와 `mathjax_support.html`에 관한 명령문이 적혀있어야 한다 [9]
+
+    ```html
+    ---
+    ---
+    
+    <!doctype html>
+    <!--
+      Minimal Mistakes Jekyll Theme 4.17.2 by Michael Rose
+      Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+      Free for personal and commercial use under the MIT license
+      https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+    -->
+    <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
+      <head>
+        {% include head.html %}
+        {% include head/custom.html %}
+        {% if page.use_math %}
+          {% include mathjax_support.html %}
+        {% endif %}
+      </head>
+    
+      <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
+        {% include_cached skip-links.html %}
+        {% include_cached browser-upgrade.html %}
+        {% include_cached masthead.html %}
+    
+        <div class="initial-content">
+          {{ content }}
+        </div>
+    
+        {% if site.search == true %}
+          <div class="search-content">
+            {% include_cached search/search_form.html %}
+          </div>
+        {% endif %}
+    
+        <div id="footer" class="page__footer">
+          <footer>
+            {% include footer/custom.html %}
+            {% include_cached footer.html %}
+          </footer>
+        </div>
+    
+        {% include scripts.html %}
+    
+      </body>
+    </html>
+    ```
+
+    
 
 - _includes/scripts.html 파일 수정하기 [9]
 
-  - `_includes` 폴더의 `scripts.html` 파일의 맨 아래에 아래 코드를 추가
+  - `_includes` 폴더의 `scripts.html` 파일의 맨 아래에 아래 코드를 추가 [9]
 
     ```html
     <script type="text/javascript" async
@@ -108,28 +193,30 @@ tag: [latex, blog]
     ```
   
   
-  - change a `script` tag that loads MathJax from the CDN (https://github.com/mathjax/MathJax-src)
-    ```html
-    <script id="MathJax-script" async
-            src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-    
-    <script type="text/x-mathjax-config">
-       MathJax.Hub.Config({
-         extensions: ["tex2jax.js"],
-         jax: ["input/TeX", "output/HTML-CSS"],
-         tex2jax: {
-           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-           displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-           processEscapes: true
-         },
-         "HTML-CSS": { availableFonts: ["TeX"] }
-       });
-    </script>
-    ```
+    - 아래 링크 참고해서 코드 수정하니 동작 안함
+      
+      ```html
+      <script id="MathJax-script" async
+              src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+      </script>
+      
+      <script type="text/x-mathjax-config">
+         MathJax.Hub.Config({
+           extensions: ["tex2jax.js"],
+           jax: ["input/TeX", "output/HTML-CSS"],
+           tex2jax: {
+             inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+             displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+             processEscapes: true
+           },
+           "HTML-CSS": { availableFonts: ["TeX"] }
+         });
+      </script>
+      ```
+      
+      - change a `script` tag that loads MathJax from the CDN (https://github.com/mathjax/MathJax-src)
   
-    
-  
+
 
 
 
