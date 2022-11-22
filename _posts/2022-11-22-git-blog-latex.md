@@ -84,10 +84,31 @@ tag: [latex, blog]
   </html>
   ```
 
+- _includes/scripts.html 파일 수정하기
 
-  
+  - `_includes` 폴더의 `scripts.html` 파일에 아래와 같은 코드를 맨 아래에 그대로 추가
+
+    ```html
+    <script type="text/javascript" async
+    	src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
     
-  
+    <script type="text/x-mathjax-config">
+       MathJax.Hub.Config({
+         extensions: ["tex2jax.js"],
+         jax: ["input/TeX", "output/HTML-CSS"],
+         tex2jax: {
+           inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+           displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+           processEscapes: true
+         },
+         "HTML-CSS": { availableFonts: ["TeX"] }
+       });
+    </script>
+    ```
+
+    
+
 
 
 
