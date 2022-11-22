@@ -186,33 +186,33 @@ use_math: true
 
 ## References
 
-[1] 깃헙(GitHub) 블로그 10분안에 완성하기 (https://youtu.be/ACzFIAOsfpM)
+[1] [깃헙(GitHub) 블로그 10분안에 완성하기] (https://youtu.be/ACzFIAOsfpM)
 
-[2] EP01. 개발환경 설치하기 (https://youtu.be/--MMmHbSH9k)
+[2] [EP01. 개발환경 설치하기] (https://youtu.be/--MMmHbSH9k)
 
-[3] EP02. 이미지 매우 간단하게 추가하기 (https://youtu.be/1UEOWcKcVdk)
+[3] [EP02. 이미지 매우 간단하게 추가하기] (https://youtu.be/1UEOWcKcVdk)
 
-[4] EP03. 업데이트 내역을 실시간 확인하기!! (로컬 개발환경 설정방법) (https://youtu.be/0TeHUqSAb6Q)
+[4] [EP03. 업데이트 내역을 실시간 확인하기!! (로컬 개발환경 설정방법)] (https://youtu.be/0TeHUqSAb6Q)
 
-[5] EP04. 블로그 설정 매우 쉽게 변경하기 - NO코딩! (config.yml 활용) (https://youtu.be/c-h3XcDjHtQ)
+[5] [EP04. 블로그 설정 매우 쉽게 변경하기 - NO코딩! (config.yml 활용)] (https://youtu.be/c-h3XcDjHtQ)
 
-[6] EP05. 댓글 & 구글 애널리틱스 추가하기 (https://youtu.be/anXaW9xhgcU)
+[6] [EP05. 댓글 & 구글 애널리틱스 추가하기] (https://youtu.be/anXaW9xhgcU)
 
-[7] EP06. 테마변경, SNS 링크 삽입, Pagination 설정 (https://youtu.be/Wi1W3hpfvZc)
+[7] [EP06. 테마변경, SNS 링크 삽입, Pagination 설정] (https://youtu.be/Wi1W3hpfvZc)
 
-[8] EP07. 카테고리 기능, [#태그] 기능 추가하기 (https://youtu.be/3UOh0rKlxjg)
+[8] [EP07. 카테고리 기능, [#태그] 기능 추가하기] (https://youtu.be/3UOh0rKlxjg)
 
-[9] EP08. 글 목차, 404 페이지 에러 구현 (https://youtu.be/OoeGqYu8JFQ)
+[9] [EP08. 글 목차, 404 페이지 에러 구현] (https://youtu.be/OoeGqYu8JFQ)
 
-[10] EP09. 구글, 네이버 검색엔진 등록하기 (https://youtu.be/OxRZrg0u6h4)
+[10] [EP09. 구글, 네이버 검색엔진 등록하기] (https://youtu.be/OxRZrg0u6h4)
 
-[11] EP10. 블로그 내 글 검색기능 추가하기 (https://youtu.be/AONVKTeeaWY)
+[11] [EP10. 블로그 내 글 검색기능 추가하기] (https://youtu.be/AONVKTeeaWY)
 
-[12] EP11. 블로그에 설정된 폰트(글씨체) 변경하기 (https://youtu.be/k7DjQ1JF9rY)
+[12] [EP11. 블로그에 설정된 폰트(글씨체) 변경하기] (https://youtu.be/k7DjQ1JF9rY)
 
-[13] EP12. 공지사항(Notice), 버튼, YouTube 영상 추가하기 (https://youtu.be/q0P3TSoVNDM)
+[13] [EP12. 공지사항(Notice), 버튼, YouTube 영상 추가하기] (https://youtu.be/q0P3TSoVNDM)
 
-[14] EP13. (번외편) 깃헙 커밋 로그에 업데이트가 안된다면? (https://youtu.be/Z053Qn8LJyk)
+[14] [EP13. (번외편) 깃헙 커밋 로그에 업데이트가 안된다면?] (https://youtu.be/Z053Qn8LJyk)
 
 
 
