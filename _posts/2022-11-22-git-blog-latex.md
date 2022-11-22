@@ -139,36 +139,13 @@ tag: [latex, blog]
         {% endif %}
       </head>
     
-      <body class="layout--{{ page.layout | default: layout.layout }}{% if page.classes or layout.classes %}{{ page.classes | default: layout.classes | join: ' ' | prepend: ' ' }}{% endif %}">
-        {% include_cached skip-links.html %}
-        {% include_cached browser-upgrade.html %}
-        {% include_cached masthead.html %}
+    (생략)
     
-        <div class="initial-content">
-          {{ content }}
-        </div>
-    
-        {% if site.search == true %}
-          <div class="search-content">
-            {% include_cached search/search_form.html %}
-          </div>
-        {% endif %}
-    
-        <div id="footer" class="page__footer">
-          <footer>
-            {% include footer/custom.html %}
-            {% include_cached footer.html %}
-          </footer>
-        </div>
-    
-        {% include scripts.html %}
-    
-      </body>
     </html>
     ```
-
     
-
+    
+  
 - _includes/scripts.html 파일 수정하기 [9]
 
   - `_includes` 폴더의 `scripts.html` 파일의 맨 아래에 아래 코드를 추가 [9]
