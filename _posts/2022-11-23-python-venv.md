@@ -67,3 +67,11 @@ tag: [python, virtual, env]
 - https://github.com/pytorch/data#installation
 - python -m venv torchdata-env
 - source torchdata-env/bin/activate
+
+
+
+
+
+
+## References
+[1] dummy
