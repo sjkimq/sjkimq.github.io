@@ -191,9 +191,9 @@ use_math: true
   /*
    Grid
    ========================================================================== */
-  $right-sidebar-width-narrow: 100 //200px !default;
-  $right-sidebar-width: 200 //300px !default;
-  $right-sidebar-width-wide: 250 //400px !default;
+  $right-sidebar-width-narrow: 100px !default; //200px !default;
+  $right-sidebar-width: 200px !default; //300px !default;
+  $right-sidebar-width-wide: 250px !default; //400px !default;
   ```
 
 ## References
@@ -227,7 +227,6 @@ use_math: true
 [14] [EP13. (번외편) 깃헙 커밋 로그에 업데이트가 안된다면?](https://youtu.be/Z053Qn8LJyk)
 
 [15] [[A to Z] Github Blog Jekyll minimal mistakes](https://eona1301.github.io/a_to_z/GithubBlog/)
-
 
 
 
