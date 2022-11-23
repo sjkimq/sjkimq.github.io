@@ -37,18 +37,16 @@ tag: [python, virtual, env]
       pipenv --rm
       ```
   - 가상환경 실행
-    - `shell` 로 실행
-      - 가상환경이 활성화된 터미널이 열림
-        ```
-        # Run shell
-        pipenv shell
-        ```
-    - `run` 으로 실행
-      - 스크립트 또는 명령어를 가상환경에서 실행만 하고 가상환경을 활성화하지는 않는 방법
-        ```
-        # Rum custom commands
-        pipenv run COMMANDS...
-        ```
+    - `shell` 로 실행 : 가상환경이 활성화된 터미널이 열림
+      ```
+      # Run shell
+      pipenv shell
+      ```
+    - `run` 으로 실행 : 스크립트 또는 명령어를 가상환경에서 실행만 하고 가상환경을 활성화하지는 않는 방법
+      ```
+      # Rum custom commands
+      pipenv run COMMANDS...
+      ```
   - 가상환경 종료
     - 가상환경을 종료하려면 해당 터미널을 빠져나온다
       ```
