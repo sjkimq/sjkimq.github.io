@@ -201,8 +201,11 @@ tag: [latex, blog]
 
 ## Reference
 [1] [Github로 블로그 만들기 + LaTeX 적용하기](https://helloworldpark.github.io/jekyll/update/2016/12/18/Github-and-Latex.html)
+
 [2] [GitHub에서 수식 입력 하기 (with LaTex)](https://www.whatwant.com/entry/GitHub-LaTex)
+
 [3] [Math support in Markdown](https://github.blog/2022-05-19-math-support-in-markdown/)
+
 [4] [github blog와 LaTeX](http://www.ktug.org/xe/index.php?mid=KTUG_open_board&document_srl=248288)
 
 [5] [github blog와 latex](https://eeeuns.github.io/2020/12/10/githubblog/)

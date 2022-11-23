@@ -27,7 +27,7 @@ use_math: true
   - Merge pull request
   - Confirm merge
 
-- _config.yml 수정 (꼭 해야되는지 모르겠음) [1]
+- _config.yml 수정 (꼭 해야되는지 모르겠음) [1], [15]
   - url 수정
     - url                      : "https://sjkimq.github.io"
   - git 에 update
@@ -182,7 +182,19 @@ use_math: true
   - 또는, github desktop에서 Create Pull Request 해준다
     - 방법은 위와 유사
 
+## 본문 관련 설정하기 [15]
 
+- _sass/_minimal_mistakes/_variables.scss 의 Grid 수정
+  - 본문에 너비를 직접적으로 넓히는게 아니라, 양쪽에 sidebar를 조절하는 방식임
+  - 기본 값은 200, 300, 400px이였지만 100, 200, 250px로 조절
+  ```scss
+  /*
+   Grid
+   ========================================================================== */
+  $right-sidebar-width-narrow: 100 //200px !default;
+  $right-sidebar-width: 200 //300px !default;
+  $right-sidebar-width-wide: 250 //400px !default;
+  ```
 
 ## References
 
@@ -214,6 +226,7 @@ use_math: true
 
 [14] [EP13. (번외편) 깃헙 커밋 로그에 업데이트가 안된다면?](https://youtu.be/Z053Qn8LJyk)
 
+[15] [[A to Z] Github Blog Jekyll minimal mistakes](https://eona1301.github.io/a_to_z/GithubBlog/)
 
 
 
