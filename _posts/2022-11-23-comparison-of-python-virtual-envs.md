@@ -15,7 +15,7 @@ tag: [python, virtual, env]
 - pyvenv
 
 
-## pipenv
+## pipenv [2]
 - 장점
   - pipfile.lock 파일을 기반으로 패키지 관리
     - lock 파일로 패키지 관리를 하면 다음과 같은 장점
@@ -53,9 +53,41 @@ tag: [python, virtual, env]
       exit
       ```
   - 패키지 관리
+    - `lock` 파일을 통해 패키지 관리가 이루어짐
+    - `lock` 파일을 만들기 위한 명세가 바로 pipfile 이다
+    - `requirements.txt`와 비슷하다
+    - `pipfile`의 구조
+      ```
+      [[source]]
+      url = "https://pypi.org/simple"
+      verify_ssl = true
+      name = "pypi"
+      
+      [packages]
+      bs4 = "*"
+      selenium = "*"
+      requests = "*"
+      cloudinary = "*"
+      
+      [dev-packages]
+      python-dotenv = "*"
+      
+      [requires]
+      python_version = "3.9"
+      ```
+    - packages는 실제 프로덕션에 사용되는 패키지들의 명세이다
+    - 패키지명 뒤에 "*"과 같이 표시해 항상 최신 버전을 사용할 수 있다
+    - dev-packages는 개발 환경에서만 필요한 패키지를 나타낸다
+    - 가상환경에 패키지를 설치하는 방법과 배포를 위해 현재 설치된 패키지의 lock 파일을 만드는 과정은 다음과 같다
+      ```
+      pipenv install numpy pandas matplotlib
+      
+      pipenv lock
+      ```
+    - 이미 pipfile이 있는 경우는 pipenv install 만 하면 해당 파일의 스펙대로 가상환경을 생성하고 패키지를 자동으로 설치해준다
 
 
-## venv
+## venv [2]
 - 장점
   - 파이썬에 내장되어 있는 가상환경 모듈
   - Python 3.5 이후부터는 파이썬 표준 라이브러리에 들어가 있는 가상환경 생성 방법
@@ -95,7 +127,7 @@ tag: [python, virtual, env]
 
 
 
-## conda (anaconda)
+## conda (anaconda) [2]
 - 특징
   - 머신러닝, 데이터과학 분야의 다양한 라이브러리들이 설치된 런타임인 아나콘다 파이썬에서 기본적으로 제공되는 가상환경 모듈
   - 굳이 아나콘다를 사용하기보다 깨끗한 파이썬에 의존성을 새로 설치하는 게 더 가볍고 정확하기 때문에 별로 추천하지는 않음
@@ -122,7 +154,7 @@ tag: [python, virtual, env]
     ```
 
 
-## pyenv-virtualenv
+## pyenv-virtualenv [2]
 - pyenv의 플러그인으로, virtualenv를 이용해 가상환경을 관리해준다. 파이썬 버전을 쉽게 변경할 수 있다는 장점이 있지만 최근에는 많이 사용하지 않고있다.
   - 가상환경 설치
   - 가상환경 생성
@@ -130,7 +162,7 @@ tag: [python, virtual, env]
   - 가상환경 종료
   - 패키지 관리
 
-## virtualenv
+## virtualenv [2]
 - 설치
   ```
   pip3 install virtualenv
@@ -158,7 +190,7 @@ tag: [python, virtual, env]
     ```
 
 
-## pyvenv
+## pyvenv [2]
 - 특징
   - Python 3.3과 3.4에서 사용하던 가상환경 도구였지만, 3.6 이후부터 사용하지 말 것이 권고되고 있음
 
