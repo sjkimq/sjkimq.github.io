@@ -27,8 +27,16 @@ a = numpy.arange(12)
 
 ```
 
+## An easy way to think of this is that numpy is working exactly as expected here, but Python's printing of tuples can be misleading.
 
+- `(R,)`
+  - $\rightarrow$ One Element Tuple  
+  - the shape of the `ndarray` is a tuple with a single elements, so is printed by Python with a trailing comma. Without the extra comma, it would be [ambiguous with an expression in parenthesis](https://wiki.python.org/moin/TupleSyntax).
+  - `ndarray` with a single dimension can be though of as a column vector of length `R`.
 
+- `(R, 1)`
+  - $\rightarrow$ Multiple Element Tuple  
+  - the tuple has two elements, so can be thought of as a row vector (or a matrix with 1 row) of length `R`. ??????????
 
 
 ## Python's tuple syntax [3]
