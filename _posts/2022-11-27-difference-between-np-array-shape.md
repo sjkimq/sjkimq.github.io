@@ -3,7 +3,7 @@
 
 layout: post
 title:  "Difference between numpy array shape R 1 and R"
-categories: python
+categories: numpy
 tag: [python, numpy, array]
 
 ---
