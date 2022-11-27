@@ -1,10 +1,14 @@
 
 ---
+
 layout: post
-title:  "Difference between numpy.array shape (R, 1) and (R,)"
+title:  "Difference between numpy array shape R 1 and R"
 categories: python
-tag: [python]
+tag: [python, numpy, array]
+
 ---
+
+
 
 
 # Difference between numpy.array shape (R, 1) and (R,) [1]
