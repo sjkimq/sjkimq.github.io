@@ -11,6 +11,12 @@ tag: [python, numpy, array]
 
 
 
+
+
+
+
+
+
 # Difference between numpy.array shape (R, 1) and (R,) [1]
 
 ## Python numpy array 에서 shape (R, 1) 과 (R,) 의 차이점  
