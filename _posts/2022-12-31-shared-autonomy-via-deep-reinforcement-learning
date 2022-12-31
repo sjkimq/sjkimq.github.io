@@ -9,6 +9,34 @@ tag: [robotics, shared-autonomy]
 
 # Shared Autonomy via Deep Reinforcement Learning [1]
 
+- 카메라가 달린 드론을 원격으로 조종해서 착륙
+  - 다양한 원인으로 사람이 원격으로 제어하기 힘들다
+    - unfamiliar flight dynamics
+    - terrain
+    - network latency
+
+- Shared autonomy
+  - human controlled user input과 automated assistance를 augmenting 한다
+
+## Background
+
+## Model-Free RL with a Human in the Loop
+
+## Learning to Assist
+
+## Incorporating User Input
+
+
+## Q-Learning with User Control
+
+
+## User Studies
+
+### The Lunar Lander Game
+
+### Quadrotor Landing Task
+
+## What's Next?
 
 
 ## References
